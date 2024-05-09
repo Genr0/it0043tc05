@@ -1,10 +1,207 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>IT0043 - TC05 </title>
-  </head>
-  <body>
-    <h1> Baldemoro, Genro Gabriel </h1>
-    <h2>BSIT - TC05 </h2>
-    <p>Hello po!</p>
-  </body>
-</html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  form {
+    text-align: center;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  th {
+    background-color: #8400ff;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+  <form action="/submit-pokemon" method="post" enctype="multipart/form-data">
+    <label for="nationalDex">National Dex:</label><br>
+    <input type="number" id="nationalDex" name="nationalDex" min="0"><br>
+    <label for="pokemonName">Pokemon Name:</label><br>
+    <input type="text" id="pokemonName" name="pokemonName"><br>
+    <label>Generation:</label><br>
+    <input type="radio" id="gen1" name="generation" value="1">
+    <label for="gen1">1</label>
+    <input type="radio" id="gen2" name="generation" value="2">
+    <label for="gen2">2</label>
+    <input type="radio" id="gen3" name="generation" value="3">
+    <label for="gen3">3</label>
+    <input type="radio" id="gen4" name="generation" value="4">
+    <label for="gen4">4</label>
+    <input type="radio" id="gen5" name="generation" value="5">
+    <label for="gen5">5</label>
+    <input type="radio" id="gen6" name="generation" value="6">
+    <label for="gen6">6</label>
+    <input type="radio" id="gen7" name="generation" value="7">
+    <label for="gen7">7</label>
+    <input type="radio" id="gen8" name="generation" value="8">
+    <label for="gen8">8</label>
+    <input type="radio" id="gen9" name="generation" value="9">
+    <label for="gen9">9</label><br>
+    <label for="image">Image:</label><br>
+    <input type="file" id="image" name="image"><br>
+    <label>Type 1:</label>
+    <input list="type1options" id="type1" name="type1">
+    <label>Type 2:</label>
+    <input list="type2options" id="type2" name="type2"><br>
+    <datalist id="type1options">
+      <option value="Fire">
+      <option value="Water">
+      <option value="Grass">
+      <option value="Dark">
+    </datalist>
+    <datalist id="type2options">
+      <option value="Fire">
+      <option value="Water">
+      <option value="Grass">
+      <option value="Dark">
+    </datalist><br>
+    <label for="evolvesFrom">Evolves From:</label>
+    <input type="text" id="evolvesFrom" name="evolvesFrom">
+    <label for="evolvesTo">Evolves To:</label>
+    <input type="text" id="evolvesTo" name="evolvesTo"><br>
+    <label for="nickname">Nickname:</label><br>
+    <input type="text" id="nickname" name="nickname"><br>
+    <label for="birthday">Birthday:</label><br>
+    <input type="date" id="birthday" name="birthday"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+ 
+<table>
+  <tr>
+    <th>National Dex</th>
+    <th>Generation</th>
+    <th>Pokémon Name</th>
+    <th>Image</th>
+    <th>Type 1</th>
+    <th>Type 2</th>
+    <th>Evolves From</th>
+    <th>Evolves To</th>
+    <th>Nickname</th>
+    <th>Birthday</th>
+  </tr>
+  <tr>
+    <td>001</td>
+    <td>1</td>
+    <td>GenroSaur</td>
+    <td><img src = https://scontent.fmnl5-2.fna.fbcdn.net/v/t31.18172-8/278663_243300629022157_5122316_o.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG7GSYqx3o8UVzBCAHrICrjQ_-xNljit4BD_7E2WOK3gBi4yM51nuWqnNJfJoJDVAg_vebH8CJgdxBmNkgGDwtl&_nc_ohc=8t4uc9VJnFUQ7kNvgHtiAIt&_nc_ht=scontent.fmnl5-2.fna&oh=00_AfD9Cf-jSAvBqAFaRnpq9Inbe828h3O4_Q4OWZ4SmbAY-Q&oe=66644272 width = "100" height = "100"></td>
+    <td colspan = "2" style = "background-color: rgb(51, 2, 185); color:white ;">Dark</td>
+    <td>GenroLing</td>
+    <td>Genroker</td>
+    <td>Genny</td>
+    <td>07-25-2005</td>
+  </tr>
+  <tr>
+    <td>002</td>
+    <td>1</td>
+    <td>Bulbasaur</td>
+    <td><img src = https://archives.bulbagarden.net/media/upload/thumb/f/fb/0001Bulbasaur.png/70px-0001Bulbasaur.png></td>
+    <td style = "background-color: rgb(2, 185, 48); color:white ;">Grass</td>
+    <td style = "background-color: rgb(195, 0, 255); color:white ;">Poison</td>
+    <td>-</td>
+    <td>Ivyaur</td>
+    <td>Genny</td>
+    <td>07-25-2005</td>
+  </tr>
+  <tr>
+    <td>003</td>
+    <td>1</td>
+    <td>Ivysaur</td>
+    <td><img src = https://archives.bulbagarden.net/media/upload/thumb/8/81/0002Ivysaur.png/70px-0002Ivysaur.png></td>
+    <td style = "background-color: rgb(2, 185, 48); color:white ;">Grass</td>
+    <td style = "background-color: rgb(195, 0, 255); color:white ;">Poison</td>
+    <td>Bulbasaur</td>
+    <td>Venasaur</td>
+    <td>Genny</td>
+    <td>07-25-2005</td>
+  </tr>
+  <tr>
+    <td>004</td>
+    <td>1</td>
+    <td>Venasaur</td>
+    <td><img src = https://archives.bulbagarden.net/media/upload/thumb/6/6b/0003Venusaur.png/70px-0003Venusaur.png></td>
+    <td style = "background-color: rgb(2, 185, 48); color:white ;">Grass</td>
+    <td style = "background-color: rgb(195, 0, 255); color:white ;">Poison</td>
+    <td>Ivysaur</td>
+    <td>-</td>
+    <td>Genny</td>
+    <td>07-25-2005</td>
+  </tr>
+  <tr>
+    <td>005</td>
+    <td>1</td>
+    <td>Charmander</td>
+    <td><img src = https://archives.bulbagarden.net/media/upload/thumb/2/27/0004Charmander.png/70px-0004Charmander.png></td>
+    <td colspan = "2" style = "background-color: rgb(185, 2, 2); color:white ;">Fire</td>
+    <td>-</td>
+    <td>Charmeleon</td>
+    <td>Genny</td>
+    <td>07-25-2005</td>
+  </tr>
+  <tr>
+    <td>006</td>
+    <td>1</td>
+    <td>Charmeleon</td>
+    <td><img src =https://archives.bulbagarden.net/media/upload/thumb/0/05/0005Charmeleon.png/70px-0005Charmeleon.png></td>
+    <td colspan = "2" style = "background-color: rgb(185, 2, 2); color:white ;">Fire</td>
+    <td>Charmander</td>
+    <td>Charizard</td>
+    <td>Genny</td>
+    <td>07-25-2005</td>
+  </tr>
+  <tr>
+    <td>007</td>
+    <td>1</td>
+    <td>Charizard</td>
+    <td><img src =https://archives.bulbagarden.net/media/upload/thumb/3/38/0006Charizard.png/70px-0006Charizard.png></td>
+    <td colspan = "2" style = "background-color: rgb(185, 2, 2); color:white ;">Fire</td>
+    <td>Charmeleon</td>
+    <td>-</td>
+    <td>Genny</td>
+    <td>07-25-2005</td>
+  </tr>
+  <tr>
+    <td>008</td>
+    <td>1</td>
+    <td>Squirtle</td>
+    <td><img src = https://archives.bulbagarden.net/media/upload/thumb/5/54/0007Squirtle.png/70px-0007Squirtle.png></td>
+    <td colspan = "2" style = "background-color: rgb(0, 81, 255); color:white ;">Water</td>
+    <td>-</td>
+    <td>Wartortle</td>
+    <td>Genny</td>
+    <td>07-25-2005</td>
+  </tr>
+  <tr>
+    <td>009</td>
+    <td>1</td>
+    <td>Wartortle</td>
+    <td><img src = https://archives.bulbagarden.net/media/upload/thumb/0/0f/0008Wartortle.png/70px-0008Wartortle.png></td>
+    <td colspan = "2" style = "background-color: rgb(0, 81, 255); color:white ;">Water</td>
+    <td>Squirtle</td>
+    <td>Blastoise</td>
+    <td>Genny</td>
+    <td>07-25-2005</td>
+  </tr>
+  <tr>
+    <td>010</td>
+    <td>1</td>
+    <td>Blastoise</td>
+    <td><img src =https://archives.bulbagarden.net/media/upload/thumb/0/0a/0009Blastoise.png/70px-0009Blastoise.png></td>
+    <td colspan = "2" style = "background-color: rgb(0, 81, 255); color:white ;">Water</td>
+    <td>Wartortle</td>
+    <td>-</td>
+    <td>Genny</td>
+    <td>07-25-2005</td>
+  </tr>
+ 
