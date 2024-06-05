@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+#grid-container{
+    width: 100vw;
+    height: 100vh;
+    margin: 20px auto;
+    outline:8px solid rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    background: url(https://wallpapers.com/images/hd/berserk-manga-5hfcmahav9bc083u.jpg);
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 10px;
+    color: black;
+    font-size: .5rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.one{
+    background-color: #5e5e5e;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.two{
+    background-color: hsl(204, 68%, 75%) ;
+}
+
+.three{
+    background-color: rgb(126, 86, 0);
+}
+
+.four{
+    background-color: #183f01;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.five{
+    background-color: rgb(81, 0, 128);
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+img{
+    width: 100px;
+    height: 120px;
+}
+
+.name{
+    font-size: 3rem;
+}
+
+.title{
+    font-size: 2rem;
+}
+
+.text{
+ font-size: .5rem;
+ text-align: justify;
+}
+
+.details{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
