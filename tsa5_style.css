@@ -1,0 +1,199 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#grid-container {
+    width: auto;
+    height: auto;
+    margin: auto;
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    background: url(https://wallpapers.com/images/hd/berserk-manga-5hfcmahav9bc083u.jpg);
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 10px;
+    color: black;
+    font-size: .5rem;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.one {
+    text-align: justify;
+    font-size: 1rem;
+    background-color: #5e5e5e;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.two {
+    background-color: hsl(204, 68%, 75%);
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.three {
+    text-align: justify;
+    font-size: 1rem;
+    background-color: rgb(99, 32, 1);
+}
+
+.four {
+    text-align: justify;
+    font-size: 1rem;
+    background-color: #183f01;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.five {
+    text-align: justify;
+    font-size: 1rem;
+    background-color: rgb(81, 0, 128);
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+img {
+    width: 100px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 3rem;
+}
+
+.title {
+    font-size: 2rem;
+    color: rgb(223, 41, 41);
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.two .details,
+.three .details,
+.five .details {
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 1168px) {
+    #grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .one {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .two {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .three {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .four {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .five {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .one .name {
+        margin-left: 70px;
+    }
+
+    .four .name {
+        margin-left: 30px;
+    }
+
+    .five .details {
+        flex-direction: row;
+    }
+
+    .five .name,
+    .five .title {
+        margin-left: 10px; 
+    }
+}
+
+@media (max-width: 768px) {
+    #grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .item {
+        grid-column: 1;
+    }
+
+    .one, .two, .three, .four, .five {
+        grid-row: auto;
+        grid-column: auto;
+    }
+
+    .details {
+        flex-direction: row; 
+    }
+
+    .title {
+        display: block; 
+    }
+
+    .two .details, .three .details {
+        flex-direction: row;
+    }
+
+    .two .name,
+    .two .title,
+    .three .name,
+    .three .title {
+        margin-left: 10px; 
+    }
+}
