@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Simulator</title>
+    <link rel="stylesheet" href="sim.css">
+</head>
+<body>
+    <div class="controls">
+        <button onclick="resetFlexbox()">Reset Flexbox</button>
+        <label>
+            Gap:
+            <input type="number" min="0" id="gap" value="0" oninput="updateGap()">
+        </label>
+        <div>
+            <p>Flex Direction</p>
+            <button onclick="setFlexDirection('row')">Row</button>
+            <button onclick="setFlexDirection('column')">Column</button>
+        </div>
+        <div>
+            <p>Justify Content</p>
+            <button onclick="setJustifyContent('flex-start')">Start</button>
+            <button onclick="setJustifyContent('center')">Center</button>
+            <button onclick="setJustifyContent('flex-end')">End</button>
+            <button onclick="setJustifyContent('space-between')">Space Between</button>
+            <button onclick="setJustifyContent('space-around')">Space Around</button>
+            <button onclick="setJustifyContent('space-evenly')">Space Evenly</button>
+        </div>
+        <div>
+            <p>Align Items</p>
+            <button onclick="setAlignItems('flex-start')">Start</button>
+            <button onclick="setAlignItems('center')">Center</button>
+            <button onclick="setAlignItems('flex-end')">End</button>
+        </div>
+        <div>
+            <p>Flex Grow</p>
+            <label>
+                Box 1:
+                <input type="number" min = "0" id="grow1" value="0" onchange="updateFlexGrow(1)">
+            </label>
+            <label>
+                Box 2:
+                <input type="number" min = "0" id="grow2" value="0" onchange="updateFlexGrow(2)">
+            </label>
+            <label>
+                Box 3:
+                <input type="number" min = "0" id="grow3" value="0" onchange="updateFlexGrow(3)">
+            </label>
+            <label>
+                Box 4:
+                <input type="number" min = "0" id="grow4" value="0" onchange="updateFlexGrow(4)">
+            </label>
+            <button onclick ="growAll()">Grow All</button>
+        </div>
+    </div>
+    <div class="flex-container" id="flexContainer">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+    <script src="sim.js"></script>
+</body>
+</html>
