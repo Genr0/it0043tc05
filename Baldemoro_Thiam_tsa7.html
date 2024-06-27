@@ -35,6 +35,7 @@
         </div>
         <div>
             <p>Flex Grow</p>
+            <button onclick ="growAll()">Grow All</button>
             <label>
                 Box 1:
                 <input type="number" min = "0" id="grow1" value="0" onchange="updateFlexGrow(1)">
@@ -51,7 +52,6 @@
                 Box 4:
                 <input type="number" min = "0" id="grow4" value="0" onchange="updateFlexGrow(4)">
             </label>
-            <button onclick ="growAll()">Grow All</button>
         </div>
     </div>
     <div class="flex-container" id="flexContainer">
